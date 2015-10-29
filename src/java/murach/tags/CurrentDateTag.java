@@ -12,8 +12,8 @@ public class CurrentDateTag extends TagSupport {
   @Override
   public int doStartTag() throws JspException {
     Date currentDate = new Date();
-    DateFormat shortDate = DateFormat.getDateInstance(DateFormat.SHORT);
-    String currentDateFormatted = shortDate.format(currentDate);
+    DateFormat longDate = DateFormat.getDateInstance(DateFormat.LONG);
+    String currentDateFormatted = longDate.format(currentDate);
 
     try {
       JspWriter out = pageContext.getOut();
